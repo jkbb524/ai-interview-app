@@ -29,3 +29,7 @@ pnpm-debug.log*
 
 # test
 coverage
+
+# node runtime (local install)
+nodejs/
+*.msi
