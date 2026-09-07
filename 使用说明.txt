@@ -1,0 +1,15 @@
+快速体验
+
+cd ai-interview-app
+npm install          # 若私有源不可用：npm install --registry https://registry.npmjs.org
+npm run dev          # http://localhost:5173
+登录页已预填演示账号 demo@example.com / 123456，直接点击登录即可走完「简历 → 面试（流式对话）→ 五维评分 → 复盘报告 → 历史记录」完整闭环。
+
+一处需要你知悉的说明
+本机 git 全局未配置身份（user.name/user.email 均为空），我使用了仓库级本地身份提交：ai-interview-app <dev@ai-interview.local>（仅对本仓库生效，不影响其他项目）。如需改成你自己的署名，可执行：
+
+
+cd ai-interview-app
+git config user.name "你的名字"
+git config user.email "你的邮箱"
+git commit --amend --reset-author --no-edit
