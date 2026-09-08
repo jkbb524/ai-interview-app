@@ -34,6 +34,8 @@ async function onSubmit(): Promise<void> {
     await auth.login(form.username, form.password)
     ElMessage.success('登录成功，欢迎回来')
     router.push((route.query.redirect as string) || '/dashboard')
+  } catch (e) {
+    ElMessage.error(e instanceof Error ? e.message : '登录失败')
   } finally {
     loading.value = false
   }

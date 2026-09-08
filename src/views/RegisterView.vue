@@ -47,6 +47,8 @@ async function onSubmit(): Promise<void> {
     await auth.register({ ...form })
     ElMessage.success('注册成功，开始你的面试进阶之路')
     router.push('/dashboard')
+  } catch (e) {
+    ElMessage.error(e instanceof Error ? e.message : '注册失败')
   } finally {
     loading.value = false
   }
